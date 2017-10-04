@@ -1,0 +1,29 @@
+{% extends app.debug ? '::base.html.twig' : '::base_compressed.html.twig' %}
+
+{% set flashes = app.session.flashBag.all %}
+
+{% block title %}
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+
+    <noscript>
+        {% for type, messages in flashes %}
+            <ul class="flashes {{ type }}">
+                {% for message in messages %}
+                    <li>{{ message|trans }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </noscript>
+
+    {% block content %}
+    {% endblock %}
+
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}

@@ -1,0 +1,21 @@
+# This file is auto-generated during the composer install
+parameters:
+    secret: ThisTokenIsNotSoSecretChangeIt
+    database_host: phpdocker-io-mysql
+    database_port: null
+    database_name: phpdockerio
+    database_user: username
+    database_password: password
+    database_version: 5.7
+    mailer_transport: smtp
+    mailer_host: phpdocker-io-mailhog
+    mailer_port: 1025
+    mailer_user: null
+    mailer_password: null
+    email_to: foo@faa.com
+    google_analytics: foo
+    recaptcha_site_key: lalalala
+    recaptcha_secret_key: lerelelele
+    memcached_host: phpdocker-io-memcached
+    memcached_port: 11211
+    cache_namespace: phpdocker-io

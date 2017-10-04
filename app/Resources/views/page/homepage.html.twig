@@ -1,0 +1,22 @@
+{% extends '::layout.html.twig' %}
+
+{% block content %}
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        <strong>User:</strong> {{ app.user.username }}
+        <ul>
+            <li>
+                <i>First name:</i> {{ app.user.firstname }}
+            </li>
+            <li>
+                <i>Last name:</i> {{ app.user.lastname }}
+            </li>
+            <li>
+                <a href="{{ path('logout') }}">logout</a>
+            </li>
+        </ul>
+    {% else %}
+        <a href="{{ path('connect_vkontakte') }}">auth</a>
+    {% endif %}
+
+{% endblock %}
